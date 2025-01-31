@@ -1,0 +1,10 @@
+<div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-ride="carousel" data-bs-interval="2000">
+    <div class="carousel-inner">
+      <div *ngFor="let img of carLogos; let i = index" class="carousel-item" >
+        <img [src]="img[i]" class="d-block w-100" alt="Image">
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let img of carLogos; let i = index">
+    <img [src]="img" alt="">
+  </div>
