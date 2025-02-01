@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { CarService } from '../../car.service';
 import { NgFor, NgIf } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-car-home',
   standalone: true,
-  imports: [NgFor,NgIf],
+  imports: [NgFor,NgIf,RouterLink,RouterLinkActive],
   templateUrl: './car-home.component.html',
   styleUrl: './car-home.component.css'
 })
 export class CarHomeComponent implements OnInit{
 eachCar:any
 features:any
+bootstrap:any
 
   constructor(private carService: CarService,private router:Router,private matDialog:MatDialog) {}
 
@@ -35,7 +36,8 @@ features:any
            return '';
     });
   }
-  navigateToDetails(carId:number){
-this.router.navigate(['/home/details',carId])
+  navigateToDetails(id:number){
+this.router.navigate(['/home/details',id])
   }
+
 }

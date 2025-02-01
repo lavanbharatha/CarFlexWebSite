@@ -36,9 +36,7 @@ ngOnInit(): void {
 })
 }
 
-cancelModal(){
-  this.router.navigate(['/home'])
-}
+
 navigateToHome(){
   this.router.navigate(['/home'])
 }

@@ -1,10 +1,42 @@
-<div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-ride="carousel" data-bs-interval="2000">
-    <div class="carousel-inner">
-      <div *ngFor="let img of carLogos; let i = index" class="carousel-item" >
-        <img [src]="img[i]" class="d-block w-100" alt="Image">
+<div class="blank"> </div>
+   <div class="container-fluid overflow-hidden">
+    <div class="row flex-nowrap scroll-container">
+      <div *ngFor="let image of carLogos;index as i" class="col-auto">
+        <img [src]="image" [alt]="image.alt" class="img-fluid" style="height: 50px; margin-right: 15px;" />
+      </div>
+      <div *ngFor="let image of carLogos;index as i" class="col-auto">
+        <img [src]="image" [alt]="image.alt" class="img-fluid" style="height: 50px; margin-right: 15px;" />
+      </div>
+   </div>
+
+   <div class="blank"> </div>
+
+   <div class="row main">
+    <div class="col-3 branch">
+      <div class="row d-flex flex-column">
+        <div class="subBranch">Privacy policy</div>
+        <div class="subBranch">Privacy policy</div>
+        <div class="subBranch">Privacy policy</div>
+        <div class="subBranch">Privacy policy</div>
+        <div class="subBranch">Privacy policy</div>
       </div>
     </div>
-  </div>
-  <div *ngFor="let img of carLogos; let i = index">
-    <img [src]="img" alt="">
-  </div>
+    <div class="col-3 branch">
+      <div class="row d-flex flex-column">
+        <div class="subBranch">Privacy policy</div>
+        <div class="subBranch">Privacy policy</div>
+        <div class="subBranch">Privacy policy</div>
+        <div class="subBranch">Privacy policy</div>
+        <div class="subBranch">Privacy policy</div>
+      </div>
+    </div>
+    <div class="col-3 branch">
+      <div class="row d-flex flex-column">
+        <div class="subBranch">Privacy policy</div>
+        <div class="subBranch">Privacy policy</div>
+        <div class="subBranch">Privacy policy</div>
+        <div class="subBranch">Privacy policy</div>
+        <div class="subBranch">Privacy policy</div>
+      </div>
+    </div>
+   </div>

@@ -6,13 +6,13 @@
     [ngStyle]="{ 'display': showSignUp ? 'block' : 'none' }"
     >
       <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content bg-dark modalBorder container-fluid px-2">
-          <div class="modal-header border-bottom border-dark" style="text-align: center;">
+        <div class="modal-content  modalBorder container-fluid px-2">
+          <div class="modal-header border-bottom" style="text-align: center;">
             <h3 class="text-light" style="text-align: center;">
               Create your Carflex account
             </h3>
           </div>
-          <div class="modal-body bg-dark text-light w-100" [formGroup]="signUp">
+          <div class="modal-body text-light w-100" [formGroup]="signUp">
             <div class="row form-group">
               <div class="col-lg-6">
                 <label for="fname" type="text" class="form-label ms-2">First Name</label>
@@ -67,14 +67,12 @@
                 </div>
               </div>
             </div>
-            <div class="row mt-4 ms-1">
-              <div class="col-2">
+           
+              <div class="text-center mt-5">
                 <button class="btn btn-success"><small>Login</small></button>
               </div>
-              <div class="col-2 ms-auto me-3">
-                <button class="btn btn-danger" (click)="navigateToLogin()"><small>Cancel</small></button>
-              </div>
-            </div>
+             
+           
           </div>
          <div class="modal-footer">
         </div>

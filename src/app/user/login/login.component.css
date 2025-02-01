@@ -3,6 +3,7 @@
 }
 .modal-content{
     border-radius: 20px;
+    background-color: #041E42;
 }
 .modal{
     background-image: radial-gradient(circle,#72A0C1,#3b5b74,#556c7d);

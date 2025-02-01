@@ -1,0 +1,26 @@
+.scroll-container {
+    animation: scroll 20s linear infinite; 
+    display: flex;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-118%);
+    }
+  }
+.blank{
+    height: 200px;
+  
+}
+.main{
+  padding: 50px  100px  100px  100px ;
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+.subBranch{
+  margin: 15px 15px 15px 15px ;
+}

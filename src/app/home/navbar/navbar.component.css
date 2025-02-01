@@ -1,12 +1,12 @@
 
 .navbar-brand{
-    font-size: 30px;
+    font-size: 2.5rem;
     font-family: "Times New Roman", "Georgia", "Cambria", "Palatino Linotype", serif;    
     font-style: italic;
     color: red;
 }
 .nav-link{
-    font-size: 20px;
+    font-size: 1.2rem;
     font-family: "Times New Roman", "Georgia", "Cambria", "Palatino Linotype", serif;    
     font-style: italic;
 }
@@ -33,10 +33,7 @@
   .linkBorder:hover::after {
     width: 80px;
   }
-.loginLink{
-    color: black;
-    padding: 0px 0px 0px 0px ;
-}
+
 .loginLink:hover{
     color: red;
 }
@@ -46,7 +43,18 @@
 }
 .navbar {
   z-index: 1030; /* Higher than content layers */
+  padding-bottom: 10px;
+  background-color: white;
+  
 }
+.navbar-nav{
+  display: flex;
+  justify-content: space-around;
+}
+.loginLink{
+  color: black;
+}
+
 
 
 
@@ -55,26 +63,30 @@
 
   @media (max-width:768px) {
     .navbar-collapse{
-        position: fixed;
+        position: absolute;
         align-items: right;
+        
+        justify-content: flex-start;
         top: 0px;
         right: 0px;
         height: 100vh;
-        background-color: black;
-        padding-left: 10px;
-        padding-right: 10px;
+        background-color: #041E42;
+        padding-left: 30px;
+        padding-right: 30px;
+        animation: slideInFromRight 0.50s ease-in;
     }
-    
+ 
     .navbar-nav {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        justify-content: flex-start;
       }
     
     .nav-link{
         color: aliceblue;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
     .navbar-toggler{
         position: fixed;

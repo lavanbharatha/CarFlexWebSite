@@ -185,7 +185,7 @@ cars:any=[
 {
   carId:8,
   carBrand:'Porsche Macan',
-  carPrice:'66.25 lakhs',
+  carPrice:'97.05 lakhs',
   carImages:['ProjectCars/porsche macan/4.jpg','ProjectCars/porsche macan/1.jpg','ProjectCars/porsche macan/2-main.jpg','ProjectCars/porsche macan/4.jpg'],
   carFeatures:[
       {
@@ -209,7 +209,7 @@ cars:any=[
 {
   carId:9,
   carBrand:'Skoda Sedan',
-  carPrice:'66.25 lakhs',
+  carPrice:'14.23 lakhs',
   carImages:['ProjectCars/Skoda Sedan/3.jpg','ProjectCars/Skoda Sedan/2.jpg','ProjectCars/Skoda Sedan/5.jpg','ProjectCars/Skoda Sedan/6-interiot.jpg'],
   carFeatures:[
       {
@@ -233,7 +233,7 @@ cars:any=[
 {
   carId:10,
   carBrand:'Volvo XC60',
-  carPrice:'66.25 lakhs',
+  carPrice:'80.02 lakhs',
   carImages:['ProjectCars/volvo xc60/3-main.jpg','ProjectCars/volvo xc60/1.jpg','ProjectCars/volvo xc60/5.jpg','ProjectCars/volvo xc60/6-interiot.jpeg'],
   carFeatures:[
       {

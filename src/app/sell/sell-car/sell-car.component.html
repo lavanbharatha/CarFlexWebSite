@@ -5,7 +5,7 @@
 [ngStyle]="{ 'display': showSell ? 'block' : 'none' }"
 >
   <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content bg-dark modalBorder container-fluid px-2">
+    <div class="modal-content modalBorder container-fluid px-2">
       <div class="modal-header w-100 row border-bottom border-dark">
         <h3 class="text-light col-11">
           Fill Up Your Details in the below Form
@@ -13,7 +13,7 @@
         <a href="" class="col-1 text-decoration-none" style="color: red;font-size: 50px;" (click)="navigateToHome()">×</a>
        
       </div>
-      <div class="modal-body bg-dark text-light w-100" [formGroup]="sellDetails">
+      <div class="modal-body text-light w-100" [formGroup]="sellDetails">
         <div class="row form-group mt-3">
             <div class="col-lg-6">
                 <label for="fname" type="text" class="form-label ms-2">First Name</label>
