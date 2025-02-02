@@ -260,14 +260,12 @@ getCars(){
 getCaFeatures(){
     return this.cars.carFeatures
  }
- getRentedCars(rentPurpose:string) {
+ getCarsByPurpose(rentPurpose:string) {
   return this.cars.filter((resCar:any) => resCar.carPurpose === rentPurpose)
 }
-getBuyCars() {
-  return this.cars.filter((resCar:any) => resCar.carPurpose === 'Buy')
-}
 
-getById(id:number){
+
+getById(id:number):any{
   return this.cars.find((resCar:any) => resCar.carId === id)
 }
 

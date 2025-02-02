@@ -13,31 +13,20 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class CarHomeComponent implements OnInit{
 eachCar:any
-features:any
+
 bootstrap:any
 
-  constructor(private carService: CarService,private router:Router,private matDialog:MatDialog) {}
+  constructor(
+    private carService: CarService,
+    private router:Router,
+    private matDialog:MatDialog) {}
 
   ngOnInit(): void {
     this.eachCar = this.carService.getCars();
+  }
 
-  }
-  transformFeatures(carfeatures: any[]): string[] {
-    return carfeatures.map(feature => {
-      if (feature.transmissonType)
-        {
-           return `${feature.transmissonType}`
-        };
-      
-      if (feature.airBags)
-        {
-            return `Air Bags ${feature.airBags}`
-        };
-           return '';
-    });
-  }
-  navigateToDetails(id:number){
-this.router.navigate(['/home/details',id])
+  navigateToDetails(carId:number):void{
+this.router.navigate(['/home/details',carId])
   }
 
 }

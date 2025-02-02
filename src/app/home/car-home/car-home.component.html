@@ -3,7 +3,7 @@
     <div class="container">
       <div  *ngFor="let car of eachCar" class="mx-auto" >
         <div class="card mb-4 ">
-          <img [src]="car.carImages[0]" class="card-img-top img-fluid" [alt]="car.name" (click)="navigateToDetails(car.carId)" >
+          <img [src]="car.carImages[0]" class="card-img-top img-fluid" [alt]="car.carId" (click)="navigateToDetails(car.carId)" >
           <div class="card-body text-dark">
                 <div class="text-center">
                   <button class="btn m-0 btnPrice">₹{{ car.carPrice }}</button>

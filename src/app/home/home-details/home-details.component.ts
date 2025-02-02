@@ -14,13 +14,13 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrl: './home-details.component.css'
 })
 export class HomeDetailsComponent implements OnInit{
-  
+  carId:any
   car!:any
   constructor(private router:Router,private actRoute:ActivatedRoute,private carService:CarService,private dialog:MatDialog){}
   ngOnInit(): void {
-    const id = +this.actRoute.snapshot.paramMap.get('carId')!;
+    this.carId = +this.actRoute.snapshot.paramMap.get('carId')!;
  
-      this.car=this.carService.getById(id)
+      this.car=this.carService.getById(this.carId)
     };
 
  }

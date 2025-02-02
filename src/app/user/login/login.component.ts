@@ -18,7 +18,11 @@ export class LoginComponent implements OnInit{
   fg!:FormGroup;
   showLoginForm:boolean=false
   showSignUpForm:boolean=false
-  constructor(private fb:FormBuilder,private router:Router,private actRoute:ActivatedRoute,private modalService: LoginService ){
+  constructor(
+    private fb:FormBuilder,
+    private router:Router,
+    private actRoute:ActivatedRoute,
+    private modalService: LoginService ){
     
   }
 ngOnInit(): void {
@@ -38,7 +42,7 @@ ngOnInit(): void {
 
 
 navigateToHome(){
-  this.router.navigate(['/home'])
+  this.showLoginForm=false
 }
 
 }

@@ -41,4 +41,7 @@ export class SignUpComponent implements OnInit{
     this.router.navigate(['/login'],{queryParams:{toLogin:true}})
 
   }
+  navigateToHome(){
+    this.router.navigate(['/home'])
+  }
 }

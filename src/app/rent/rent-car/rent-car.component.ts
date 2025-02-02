@@ -19,7 +19,7 @@ export class RentCarComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.rentCars=this.carService.getRentedCars('Rent');
+    this.rentCars=this.carService.getCarsByPurpose('Rent');
   }
   navigateToSignUp(){
     this.router.navigate(['login'],{queryParams:{toLogin:true}})

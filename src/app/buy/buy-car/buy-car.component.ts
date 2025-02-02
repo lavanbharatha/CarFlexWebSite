@@ -18,7 +18,7 @@ export class BuyCarComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.buyCars=this.carService.getBuyCars();
+    this.buyCars=this.carService.getCarsByPurpose('Buy');
   }
   navigateToSignUp(){
     this.router.navigate(['login'],{queryParams:{toLogin:true}})
