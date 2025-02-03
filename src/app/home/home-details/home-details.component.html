@@ -1,1 +1,24 @@
-{{car.carId}}
+<div class="container">
+    <div class="row">
+     <div class="col-9">
+         <img [src]="car.carImages[0]" alt="" class="mainImage img-fluid">
+         <button class="photosButton btn btn-danger">See all photos</button>
+     </div>
+     <div class="d-flex flex-column align-items-between sideImages col-3">
+         <img class="col-4 sideImage img-fluid" *ngFor="let image of car.carImages.slice(1); index as i" [src]="image" (click)="openImage(i)">
+      </div>
+    </div>
+ </div>
+
+ <!-- Modal to open image -->
+<div class="modal modal-lg" id="imageModal"
+[ngClass]="{ 'show': showImage }"
+[ngStyle]="{ 'display': showImage ? 'block' : 'none' }">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <img [src]="car.carImages[imageIndex+1]" alt="" class="modalImage">
+            <a class="btn btn-danger close" (click)="closeModal()">×</a>    
+        </div>
+    </div>
+</div>
+

@@ -13,19 +13,18 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class CarHomeComponent implements OnInit{
 eachCar:any
-
-bootstrap:any
-
   constructor(
     private carService: CarService,
     private router:Router,
-    private matDialog:MatDialog) {}
+    private matDialog:MatDialog
+  ) {}
 
   ngOnInit(): void {
     this.eachCar = this.carService.getCars();
+
   }
 
-  navigateToDetails(carId:number):void{
+  navigateToDetails(carId:number){
 this.router.navigate(['/home/details',carId])
   }
 

@@ -30,9 +30,7 @@ export class SignUpComponent implements OnInit{
     )
   this.aRoute.queryParams.subscribe((params)=>{
     this.showSignUp=params['toSignUp']==='true';
-    if(!this.showSignUp){
-      this.router.navigate(['/home'])
-    }
+   
   }
     
   )
@@ -41,7 +39,7 @@ export class SignUpComponent implements OnInit{
     this.router.navigate(['/login'],{queryParams:{toLogin:true}})
 
   }
-  navigateToHome(){
-    this.router.navigate(['/home'])
-  }
+  // navigateToHome(){
+  //   this.router.navigate(['/home'])
+  // }
 }

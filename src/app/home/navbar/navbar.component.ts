@@ -13,7 +13,8 @@ import { LoginService } from '../../login.service';
 export class NavbarComponent {
   bootstrap:any
   modalElement:any
-  isLoginLink:boolean=true
+  
+
   isNavbarCollapsed:boolean=false
   constructor(private router:Router,private modalService:LoginService){}
   

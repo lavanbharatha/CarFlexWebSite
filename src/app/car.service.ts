@@ -162,7 +162,7 @@ cars:any=[
   carId:7,
   carBrand:'Mercedes-Benz C-Class',
   carPrice:'66.25 lakhs',
-  carImages:['ProjectCars/Mercedes-Benz C-Class/5.avif','ProjectCars/Mercedes-Benz C-Class/1.jpg','ProjectCars/Mercedes-Benz C-Class/2.jpg','ProjectCars/Mercedes-Benz C-Class/3-interior.jpg'],
+  carImages:['ProjectCars/Mercedes-Benz C-Class/5.avif','ProjectCars/Mercedes-Benz C-Class/1.jpg','ProjectCars/Mercedes-Benz C-Class/2.jpg','ProjectCars/Mercedes-Benz C-Class/3.jpg'],
   carFeatures:[
       {
         transmissonType:'Automatic'
@@ -234,7 +234,7 @@ cars:any=[
   carId:10,
   carBrand:'Volvo XC60',
   carPrice:'80.02 lakhs',
-  carImages:['ProjectCars/volvo xc60/3-main.jpg','ProjectCars/volvo xc60/1.jpg','ProjectCars/volvo xc60/5.jpg','ProjectCars/volvo xc60/6-interiot.jpeg'],
+  carImages:['ProjectCars/volvo xc60/3-main.jpg','ProjectCars/volvo xc60/1.jpg','ProjectCars/volvo xc60/5.jpg','ProjectCars/volvo xc60/6-interior.jpeg'],
   carFeatures:[
       {
         transmissonType:'Manual'
@@ -272,7 +272,9 @@ getById(id:number):any{
  
 
 
-
+getCarImages(){
+  return this.cars.carImages
+}
 
 
 
