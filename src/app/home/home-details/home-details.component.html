@@ -2,23 +2,127 @@
     <div class="row">
      <div class="col-9">
          <img [src]="car.carImages[0]" alt="" class="mainImage img-fluid">
-         <button class="photosButton btn btn-danger">See all photos</button>
+         <button class="photosButton btn btn-danger" (click)="openCarousel()">See all photos</button>
      </div>
-     <div class="d-flex flex-column align-items-between sideImages col-3">
+     <div class="d-flex flex-column align-items-between justify-content-between sideImages col-3">
          <img class="col-4 sideImage img-fluid" *ngFor="let image of car.carImages.slice(1); index as i" [src]="image" (click)="openImage(i)">
       </div>
     </div>
+    <div class="row features">
+      <div class="col-4"><h5 class="btn btnWidth">{{car.carBrand}}</h5></div>
+      <div class="col-4" ><a class="btn btnWidth" >Price : ₹ {{car.carPrice}}</a></div>
+      <div class="col-3"><Button class="btn  btn-success w-50" style="font-size: 25px;height: 50px;">{{car.carPurpose}}</Button></div>
+    </div>
+    <div class="container2 mt-5">
+      <h4>Know more about this Car</h4>
+      <div class="container3 border-dark card card-custom-shadow " style="margin: 20px 350px 20px 0px;">
+        <div class="card-body border-secondary" style="margin: 30px 30px 30px 30px;">
+          <div class="row">
+            <div class="col-4 row">
+              <div class="col-2"><img src="IconFeature/carBrand.png"  class="featureLogo"></div>
+              <div class="col-10">
+                <a style="display: block;">Car brand</a>
+              <strong class="brand">{{car.carBrand}}</strong>
+              </div>
+            </div>
+            <div class="col-4 row">
+              <div class="col-2"><img src="IconFeature/Price tag.png"  class="featureLogo"></div>
+              <div class="col-10">
+                <a style="display: block;">Car Price</a>
+              <strong class="brand">₹ {{car.carPrice}}</strong>
+              </div>
+            </div>
+            <div class="col-4 row">
+              <div class="col-2"><img src="IconFeature/purpose.png"  class="featureLogo"></div>
+              <div class="col-10">
+                <a style="display: block;">Purpose</a>
+                <strong class="brand">{{car.carPurpose}}</strong>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-4 row">
+              <div class="col-2"><img src="IconFeature/Transmission.svg"  class="featureLogo"></div>
+              <div class="col-10">
+                <a style="display: block;">Transmission</a>
+                <strong class="brand"><p >{{carFeatures[0]?.transmissionType}}</p></strong>
+              </div>
+            </div>
+            <div class="col-4 row">
+              <div class="col-2"><img src="IconFeature/AirBags.jpg"  class="featureLogo"></div>
+              <div class="col-10">
+                <a style="display: block;">Air Bags</a>
+                <strong class="brand">{{carFeatures[2]?.airBags}} Nos</strong>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col-4 row">
+                <div class="col-2"><img src="IconFeature/Fuel.png"  class="featureLogo"></div>
+                <div class="col-10">
+                  <a style="display: block;">Transmission</a>
+                  <strong class="brand"><p >{{carFeatures[1]?.engineType}}</p></strong>
+                </div>
+              </div>
+              <div class="col-4 row">
+                <div class="col-2"><img src="IconFeature/engine.png"  class="featureLogo"></div>
+                <div class="col-10">
+                  <a style="display: block;">Fuel Tank Capacity</a>
+                  <strong class="brand">{{carFeatures[3]?.fuelTankCapacity}} Litres</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
  </div>
+
+
 
  <!-- Modal to open image -->
 <div class="modal modal-lg" id="imageModal"
 [ngClass]="{ 'show': showImage }"
 [ngStyle]="{ 'display': showImage ? 'block' : 'none' }">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <img [src]="car.carImages[imageIndex+1]" alt="" class="modalImage">
+    <div class="modal-dialog modal-dialog-centered ">
+        <div class="modal-content openImageModal">
+            <img [src]="car.carImages[imageIndex+1]" alt="" class="openImage">
             <a class="btn btn-danger close" (click)="closeModal()">×</a>    
         </div>
     </div>
 </div>
+
+
+
+<!-- Image carousel -->
+<div class="modal modal-lg"
+      [ngClass]="{ 'show': showCarousel }"
+      [ngStyle]="{ 'display': showCarousel ? 'block' : 'none' }">
+    <div class="modal-dialog modal-dialog-centered ">
+         <div class="modal-content">
+          <div id="demo" class="carousel slide" >
+            <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active ">
+                <img [src]="car.carImages[0]"  class="d-block w-100 carouselImage">
+              </div>
+              <div class="carousel-item " *ngFor="let image of car.carImages.slice(1); index as i">
+                <img class="col-4 img-fluid carouselImage"  [src]="image">
+              </div>
+            </div> 
+              <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+                <a class="btn btn-danger close" (click)="openCarousel()">×</a>
+        </div>
+    </div>
+</div>
+
 

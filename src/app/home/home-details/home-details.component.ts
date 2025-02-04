@@ -17,24 +17,51 @@ import * as $ from 'jquery';
 export class HomeDetailsComponent implements OnInit{
   carId:any
   car!:any
+  carFeatures:any[]=[]
+
+  showCarousel:boolean=false
   carImages!:[]
   imageIndex!:number
   showImage:boolean=false
-  constructor(private router:Router,private actRoute:ActivatedRoute,private carService:CarService,private dialog:MatDialog){}
+
+  constructor(
+    private router:Router,
+    private actRoute:ActivatedRoute,
+    private carService:CarService,
+    private dialog:MatDialog
+  ){}
   ngOnInit(): void {
     this.actRoute.params.subscribe(params => {
       this.carId = +Number(params['carId']); 
       this.car=this.carService.getById(this.carId)
+      this.carFeatures=this.carService.getCarFeatures(this.carId)
    
     });
-
+   
+    
+ 
  }
  openImage(index:number){
     this.imageIndex=index
-    this.showImage=true
+    this.showImage=!this.showImage
  }
  closeModal(){
   this.showImage=false
  }
+ openCarousel(){
+  this.showCarousel=!this.showCarousel
+ }
+//  closeCarousel(){
+//   this.showCarousel=false
+//  }
+transformFeatures(carfeatures: any[]): string[] {
+  return carfeatures.map(feature => {
+    if (feature.transmissonType)
+      {
+         return `${feature.transmissonType}`;
+      };
+         return '';
+  });
+}
 
 }

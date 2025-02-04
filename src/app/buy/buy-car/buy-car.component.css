@@ -37,7 +37,7 @@
   }
   .card:hover{
     cursor: pointer;
-    will-change: transform, opacity;
+
     transform: translateY(-15px) translateX(+15px);
   }
   @keyframes appear{

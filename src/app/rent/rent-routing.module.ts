@@ -9,9 +9,13 @@ const routes: Routes = [
     component:RentCarComponent
   },
   {
-    path:'details',
+    path:'details/:carId',
     component:RentDetailsComponent
-  }
+  },
+  {
+    path:'**',
+    component:RentCarComponent
+  },
 ];
 
 @NgModule({

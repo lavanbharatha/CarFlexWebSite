@@ -4,6 +4,7 @@ import { ActivatedRoute, RouterLink, RouterLinkActive, RouterOutlet } from '@ang
 import { Router } from '@angular/router';
 import { CarService } from '../../car.service';
 
+
 @Component({
   selector: 'app-buy-car',
   standalone: true,
@@ -13,7 +14,10 @@ import { CarService } from '../../car.service';
 })
 export class BuyCarComponent implements OnInit {
   buyCars: any=[]
-  constructor(private router:Router,private carService: CarService){
+  constructor(
+    private router:Router,
+    private carService:CarService
+  ){
 
   }
   

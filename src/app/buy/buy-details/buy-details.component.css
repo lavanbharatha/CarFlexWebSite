@@ -1,0 +1,89 @@
+.container{
+    margin: 70px 50px 100px 50px;
+  }
+.mainImage{
+    border-radius: 20px;
+    height: 100%;
+    position: relative;
+}
+.sideImage{
+    border-radius: 10px;
+    width: 100%;
+}
+.container {
+    max-width: 1200px;
+  }
+  img:hover{
+    cursor: pointer;
+  }
+  .photosButton{
+    position: absolute;
+    top: 120px;
+    left: 800px;
+    padding: 10px 15px 10px 15px;
+  }
+  .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0px 10px 0px 10px ;
+    font-size: 30px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+  width: 5%;
+  height: 10%;
+  background-color: red;
+  padding:0px 0px 0px 0px;
+  opacity: 1;
+}
+.carousel-control-next-icon{
+    color: black;
+}
+.carousel-indicators.active{
+    background-color: red;
+}
+
+.openImage,.openImageModal{
+    border-radius: 25px;
+}
+
+.carousel-item img {
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.modal{
+    backdrop-filter: blur(20px);
+    background-color: rgba(0,0,0,0.2);
+}
+.modal-content{
+    border-radius: 25px;
+}
+.features{
+    margin: 50px 200px 20px 0px;
+}
+.btnWidth{
+    width: 250px;
+    height: 50px;
+    background-color: #E8E9EB;
+    font-size: 25px;
+}
+.featureLogo{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+.card-body{
+    margin-top: 30px 30px 30px 30px;
+}
+.card-custom-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Apply custom shadow */
+    border-color: #E8E9EB;
+  }
+
+

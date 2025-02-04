@@ -15,7 +15,7 @@ cars:any=[
     carImages:['ProjectCars/Aston Martin/1-main.jpg','ProjectCars/Aston Martin/2.jpg','ProjectCars/Aston Martin/5.jpg','ProjectCars/Aston Martin/6-interior.jpg'],
     carFeatures:[
         {
-          transmissonType:'Automatic'
+          transmissionType:'Automatic'
         },
         {
           engineType:'Vantage V8'
@@ -41,7 +41,7 @@ cars:any=[
     carImages:['ProjectCars/Audi-Q7/1.jpg','ProjectCars/Audi-Q7/2.jpg','ProjectCars/Audi-Q7/3.jpg','ProjectCars/Audi-Q7/5-interior.jpeg'],
     carFeatures:[
         {
-          transmissonType:'Automatic'
+          transmissionType:'Automatic'
         },
         {
           engineType:'V engine'
@@ -61,12 +61,12 @@ cars:any=[
 
  {
   carId:3,
-    carBrand:'BMW-5-series',
+    carBrand:'BMW-5-Series',
     carPrice:'72.90 lakhs',
     carImages:['ProjectCars/BMW-5-series/1.jpg','ProjectCars/BMW-5-series/2.jpg','ProjectCars/BMW-5-series/3.jpg','ProjectCars/BMW-5-series/4.jpeg'],
     carFeatures:[
         {
-          transmissonType:'Automatic'
+          transmissionType:'Automatic'
         },
         {
           engineType:'2.0L - 4 Cylinder'
@@ -91,7 +91,7 @@ cars:any=[
   carImages:['ProjectCars/Jaguar XF/4.jpg','ProjectCars/Jaguar XF/2.jpg','ProjectCars/Jaguar XF/3.jpg','ProjectCars/Jaguar XF/5-interior.jpg'],
   carFeatures:[
       {
-        transmissonType:'Automatic'
+        transmissionType:'Automatic'
       },
       {
         engineType:'2.0L - 4 Cylinder diesel'
@@ -116,7 +116,7 @@ cars:any=[
   carImages:['ProjectCars/Kia EV6/3.jpeg','ProjectCars/Kia EV6/4.jpg','ProjectCars/Kia EV6/5.jpeg','ProjectCars/Kia EV6/6-interior.jpg'],
   carFeatures:[
       {
-        transmissonType:'Automatic'
+        transmissionType:'Automatic'
       },
       {
         engineType:'No engine'
@@ -141,7 +141,7 @@ cars:any=[
   carImages:['ProjectCars/Lexus ES 300h/4.jpg','ProjectCars/Lexus ES 300h/3.jpg','ProjectCars/Lexus ES 300h/5.jpg','ProjectCars/Lexus ES 300h/6-interior.jpg'],
   carFeatures:[
       {
-        transmissonType:'Automatic'
+        transmissionType:'Automatic'
       },
       {
         engineType:'2.5L A25A-FXS I4'
@@ -165,7 +165,7 @@ cars:any=[
   carImages:['ProjectCars/Mercedes-Benz C-Class/5.avif','ProjectCars/Mercedes-Benz C-Class/1.jpg','ProjectCars/Mercedes-Benz C-Class/2.jpg','ProjectCars/Mercedes-Benz C-Class/3.jpg'],
   carFeatures:[
       {
-        transmissonType:'Automatic'
+        transmissionType:'Automatic'
       },
       {
         engineType:'1.5L 4-Cylinder'
@@ -189,7 +189,7 @@ cars:any=[
   carImages:['ProjectCars/porsche macan/4.jpg','ProjectCars/porsche macan/1.jpg','ProjectCars/porsche macan/2-main.jpg','ProjectCars/porsche macan/4.jpg'],
   carFeatures:[
       {
-        transmissonType:'Automatic'
+        transmissionType:'Automatic'
       },
       {
         engineType:'1.5L 4-Cylinder'
@@ -213,7 +213,7 @@ cars:any=[
   carImages:['ProjectCars/Skoda Sedan/3.jpg','ProjectCars/Skoda Sedan/2.jpg','ProjectCars/Skoda Sedan/5.jpg','ProjectCars/Skoda Sedan/6-interiot.jpg'],
   carFeatures:[
       {
-        transmissonType:'Manual'
+        transmissionType:'Manual'
       },
       {
         engineType:'2.0 TSI Engine'
@@ -237,7 +237,7 @@ cars:any=[
   carImages:['ProjectCars/volvo xc60/3-main.jpg','ProjectCars/volvo xc60/1.jpg','ProjectCars/volvo xc60/5.jpg','ProjectCars/volvo xc60/6-interior.jpeg'],
   carFeatures:[
       {
-        transmissonType:'Manual'
+        transmissionType:'Manual'
       },
       {
         engineType:'2.0L 4-Cylinder'
@@ -253,15 +253,14 @@ cars:any=[
 }, 
 
 ]
-
+getcarFeatures:any
 getCars(){
  return this.cars
 }
-getCaFeatures(){
-    return this.cars.carFeatures
- }
- getCarsByPurpose(rentPurpose:string) {
-  return this.cars.filter((resCar:any) => resCar.carPurpose === rentPurpose)
+
+ 
+ getCarsByPurpose(purpose:string) {
+  return this.cars.filter((resCar:any) => resCar.carPurpose === purpose)
 }
 
 
@@ -277,5 +276,8 @@ getCarImages(){
 }
 
 
-
+getCarFeatures(id: number) {
+  const car = this.cars.find((resCar: any) => resCar.carId === id);
+  return car ? car.carFeatures : [];
+}
 }

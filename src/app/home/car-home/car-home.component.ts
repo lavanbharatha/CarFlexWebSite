@@ -24,8 +24,8 @@ eachCar:any
 
   }
 
-  navigateToDetails(carId:number){
-this.router.navigate(['/home/details',carId])
-  }
+//   navigateToDetails(carId:number){
+// this.router.navigate(['/home/details',carId])
+//   }
 
 }
