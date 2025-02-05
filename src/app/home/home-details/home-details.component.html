@@ -1,81 +1,91 @@
-<div class="container">
-    <div class="row">
-     <div class="col-9">
-         <img [src]="car.carImages[0]" alt="" class="mainImage img-fluid">
-         <button class="photosButton btn btn-danger" (click)="openCarousel()">See all photos</button>
-     </div>
-     <div class="d-flex flex-column align-items-between justify-content-between sideImages col-3">
-         <img class="col-4 sideImage img-fluid" *ngFor="let image of car.carImages.slice(1); index as i" [src]="image" (click)="openImage(i)">
-      </div>
+ <div class="container">
+  <div class="row">
+   <div class="col-9">
+       <img [src]="car.carImages[0]" alt="" class="mainImage img-fluid">
+       <button class="photosButton btn btn-danger" (click)="openCarousel()">See all photos</button>
+   </div>
+   <div class="d-flex flex-column align-items-between justify-content-between sideImages col-3">
+       <img class="col-4 sideImage img-fluid" *ngFor="let image of car.carImages.slice(1); index as i" [src]="image" (click)="openImage(i)">
     </div>
-    <div class="row features">
-      <div class="col-4"><h5 class="btn btnWidth">{{car.carBrand}}</h5></div>
-      <div class="col-4" ><a class="btn btnWidth" >Price : ₹ {{car.carPrice}}</a></div>
-      <div class="col-3"><Button class="btn  btn-success w-50" style="font-size: 25px;height: 50px;">{{car.carPurpose}}</Button></div>
-    </div>
-    <div class="container2 mt-5">
-      <h4>Know more about this Car</h4>
-      <div class="container3 border-dark card card-custom-shadow " style="margin: 20px 350px 20px 0px;">
-        <div class="card-body border-secondary" style="margin: 30px 30px 30px 30px;">
-          <div class="row">
-            <div class="col-4 row">
-              <div class="col-2"><img src="IconFeature/carBrand.png"  class="featureLogo"></div>
-              <div class="col-10">
-                <a style="display: block;">Car brand</a>
-              <strong class="brand">{{car.carBrand}}</strong>
-              </div>
-            </div>
-            <div class="col-4 row">
-              <div class="col-2"><img src="IconFeature/Price tag.png"  class="featureLogo"></div>
-              <div class="col-10">
-                <a style="display: block;">Car Price</a>
-              <strong class="brand">₹ {{car.carPrice}}</strong>
-              </div>
-            </div>
-            <div class="col-4 row">
-              <div class="col-2"><img src="IconFeature/purpose.png"  class="featureLogo"></div>
-              <div class="col-10">
-                <a style="display: block;">Purpose</a>
-                <strong class="brand">{{car.carPurpose}}</strong>
-              </div>
-            </div>
+  </div>
+  <div class="row features">
+    <div class="col-4"><h5 class="btn btnWidth">{{car.carBrand}}</h5></div>
+    <div class="col-4" ><a class="btn btnWidth" >Price : ₹ {{car.carPrice}}</a></div>
+    <div class="col-3"><Button class="btn  btn-success w-50" style="font-size: 25px;height: 50px;">{{car.carPurpose}}</Button></div>
+  </div>
+  <div class="container2 mt-5">
+    <h4>Know more about this Car</h4>
+    <div class="container3 border-dark card card-custom-shadow " style="margin: 20px 300px 0px 0px;">
+      <div class="card-body border-secondary d-grid grid" style="margin: 0px 30px 30px 30px;">
+        <div class="row icon">
+          <div class="col-2">
+            <img src="IconFeature/carBrand.png"  class="featureLogo col-4">
           </div>
-          <div class="row mt-5">
-            <div class="col-4 row">
-              <div class="col-2"><img src="IconFeature/Transmission.svg"  class="featureLogo"></div>
-              <div class="col-10">
-                <a style="display: block;">Transmission</a>
-                <strong class="brand"><p >{{carFeatures[0]?.transmissionType}}</p></strong>
-              </div>
-            </div>
-            <div class="col-4 row">
-              <div class="col-2"><img src="IconFeature/AirBags.jpg"  class="featureLogo"></div>
-              <div class="col-10">
-                <a style="display: block;">Air Bags</a>
-                <strong class="brand">{{carFeatures[2]?.airBags}} Nos</strong>
-              </div>
-            </div>
-            <div class="row mt-5">
-              <div class="col-4 row">
-                <div class="col-2"><img src="IconFeature/Fuel.png"  class="featureLogo"></div>
-                <div class="col-10">
-                  <a style="display: block;">Transmission</a>
-                  <strong class="brand"><p >{{carFeatures[1]?.engineType}}</p></strong>
-                </div>
-              </div>
-              <div class="col-4 row">
-                <div class="col-2"><img src="IconFeature/engine.png"  class="featureLogo"></div>
-                <div class="col-10">
-                  <a style="display: block;">Fuel Tank Capacity</a>
-                  <strong class="brand">{{carFeatures[3]?.fuelTankCapacity}} Litres</strong>
-                </div>
-              </div>
-            </div>
+          <div  class="col-10">
+            <a style="display: block;" class="ms-2">Car brand</a>
+            <strong class="brand ms-2">{{car.carBrand}}</strong>
+          </div>
+        </div>
+        <div class="row icon">
+          <div class="col-2">
+            <img src="IconFeature/Price tag.png"  class="featureLogo col-4">
+          </div>
+          <div  class="col-10">
+            <a style="display: block;" class="ms-2">Car Price</a>
+            <strong class="brand ms-2">₹ {{car.carPrice}}</strong>
+          </div>
+        </div>
+        <div class="row icon" >
+          <div class="col-2">
+            <img src="IconFeature/purpose.png"  class="featureLogo col-4">
+          </div>
+          <div  class="col-10">
+            <a style="display: block;" class="ms-2">Car Purpose</a>
+            <strong class="brand ms-2">{{car.carPurpose}}</strong>
+          </div>
+        </div>
+        <div class="row icon">
+          <div class="col-2">
+            <img src="IconFeature/Transmission.svg"  class="featureLogo col-4">
+          </div>
+          <div  class="col-10">
+            <a style="display: block;" class="ms-2">Transmission</a>
+            <strong class="brand ms-2">{{carFeatures[0]?.transmissionType}}</strong>
+          </div>
+        </div>
+          <div class="row icon">
+          <div class="col-2">
+            <img src="IconFeature/engine.png"  class="featureLogo col-4">
+          </div>
+          <div  class="col-10">
+            <a style="display: block;" class="ms-2">Engine Type</a>
+            <strong class="brand ms-2">{{carFeatures[1]?.engineType}}</strong>
+          </div>
+        </div>
+        <div class="row icon">
+          <div class="col-2">
+            <img src="IconFeature/AirBags.jpg"  class="featureLogo col-4">
+          </div>
+          <div  class="col-10">
+            <a style="display: block;" class="ms-2">Air Bags</a>
+            <strong class="brand ms-2">{{carFeatures[2]?.airBags}} Nos</strong>
+          </div>
+        </div>
+        <div class="row icon">
+          <div class="col-2">
+            <img src="IconFeature/Fuel.png"  class="featureLogo col-4">
+          </div>
+          <div  class="col-10">
+            <a style="display: block;" class="ms-2">Fuel Tank Capacity</a>
+            <strong class="brand ms-2">{{carFeatures[3]?.fuelTankCapacity}} Litres</strong>
           </div>
         </div>
       </div>
     </div>
- </div>
+  </div>
+</div>
+
+
 
 
 

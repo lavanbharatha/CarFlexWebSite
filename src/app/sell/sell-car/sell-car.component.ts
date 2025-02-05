@@ -45,7 +45,7 @@ export class SellCarComponent {
 )
   }
   navigateToHome(){
-    this.router.navigate(['/login/signUp'],{queryParams:{toSignUp:true}})
+    this.router.navigate(['/home'])
   }
   navigateToSignUp(){
    

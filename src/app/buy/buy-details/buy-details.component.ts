@@ -14,6 +14,7 @@ import { CarService } from '../../car.service';
 })
 export class BuyDetailsComponent {
   carId:any
+  carFeatures:any
   car!:any
   showCarousel:boolean=false
   carImages!:[]
@@ -28,6 +29,7 @@ export class BuyDetailsComponent {
     this.actRoute.params.subscribe(params => {
       this.carId = +Number(params['carId']); 
       this.car=this.carService.getById(this.carId)
+      this.carFeatures=this.carService.getCarFeatures(this.carId)
        });
   }
  openImage(index:number){

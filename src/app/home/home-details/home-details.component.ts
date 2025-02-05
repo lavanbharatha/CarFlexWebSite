@@ -3,14 +3,14 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { CarService } from '../../car.service';
 import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
-import { ModalPopUpComponent } from '../modal-pop-up/modal-pop-up.component';
+
 import { MatDialog } from '@angular/material/dialog';
 import * as $ from 'jquery';
 
 @Component({
   selector: 'app-home-details',
   standalone: true,
-  imports: [NgFor,NgIf,ModalPopUpComponent,NgClass,NgStyle],
+  imports: [NgFor,NgIf,NgClass,NgStyle],
   templateUrl: './home-details.component.html',
   styleUrl: './home-details.component.css'
 })

@@ -43,6 +43,7 @@ ngOnInit(): void {
 
 navigateToHome(){
   this.showLoginForm=false
+  this.router.navigate(['/home'])
 }
 
 }

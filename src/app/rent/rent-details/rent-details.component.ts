@@ -1,24 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from 'express';
 import { CarService } from '../../car.service';
-import { NgClass, NgStyle } from '@angular/common';
+import { CommonModule, NgClass, NgFor, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-rent-details',
   standalone: true,
-  imports: [NgStyle,NgClass],
+  imports: [NgStyle,NgClass,NgFor,CommonModule],
   templateUrl: './rent-details.component.html',
   styleUrl: './rent-details.component.css'
 })
-export class RentDetailsComponent {
+export class RentDetailsComponent implements OnInit{
   carId:any
   car!:any
   showCarousel:boolean=false
   carImages!:[]
   imageIndex!:number
   showImage:boolean=false
-  
+  carFeatures:any
   constructor(
     private router:Router,
     private actRoute:ActivatedRoute,
@@ -28,6 +28,7 @@ export class RentDetailsComponent {
     this.actRoute.params.subscribe(params => {
       this.carId = +Number(params['carId']); 
       this.car=this.carService.getById(this.carId)
+      this.carFeatures=this.carService.getCarFeatures(this.carId)
        });
   }
  openImage(index:number){

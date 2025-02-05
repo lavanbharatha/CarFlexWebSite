@@ -263,7 +263,6 @@ getCars(){
   return this.cars.filter((resCar:any) => resCar.carPurpose === purpose)
 }
 
-
 getById(id:number):any{
   return this.cars.find((resCar:any) => resCar.carId === id)
 }
@@ -280,4 +279,5 @@ getCarFeatures(id: number) {
   const car = this.cars.find((resCar: any) => resCar.carId === id);
   return car ? car.carFeatures : [];
 }
+
 }
