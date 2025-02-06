@@ -20,9 +20,13 @@ export const routes: Routes = [
         path:'sell',
         loadChildren:()=>import("./sell/sell-routing.module").then((m)=>m.SellRoutingModule)
     },
-    {
+    {   
         path:'rent',
-        loadChildren:()=>import("./rent/rent-routing.module").then((m)=>m.RentRoutingModule)
+        loadComponent:()=>import("./rent/rent-car/rent-car.component").then((m)=>m.RentCarComponent)
+    },
+    {
+        path:'rentDetails/:carId',
+        loadComponent:()=>import("./rent/rent-details/rent-details.component").then((m)=>m.RentDetailsComponent)
     },
     {
         path:'login',

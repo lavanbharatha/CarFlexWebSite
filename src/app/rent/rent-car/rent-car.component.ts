@@ -13,7 +13,7 @@ import { CommonModule, NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
   styleUrl: './rent-car.component.css'
 })
 export class RentCarComponent implements OnInit {
-  rentCar:any=[]
+  rentCar:any
   constructor(
     private carService: CarService,
     private router:Router,

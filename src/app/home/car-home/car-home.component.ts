@@ -28,4 +28,5 @@ eachCar:any
 // this.router.navigate(['/home/details',carId])
 //   }
 
+
 }

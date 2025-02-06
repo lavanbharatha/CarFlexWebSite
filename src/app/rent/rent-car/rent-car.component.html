@@ -2,7 +2,7 @@
 <div class="mt-4">
   <div class="container">
     <div  *ngFor="let car of rentCar" class="mx-auto" >
-      <div class="card mb-4 " [routerLink]="['/rent/rentDetails',car.carId]" routerLinkActive="active">
+      <div class="card mb-4 " [routerLink]="['/rentDetails',car.carId]" routerLinkActive="active">
         <img [src]="car.carImages[0]" class="card-img-top img-fluid" [alt]="car.carBrand" >
         <div class="card-body text-dark">
               <div class="text-center">
@@ -19,6 +19,13 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
 
 
 

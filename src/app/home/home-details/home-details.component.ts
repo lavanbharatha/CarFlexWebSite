@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 import { CarService } from '../../car.service';
 import { NgClass, NgFor, NgIf, NgStyle } from '@angular/common';
 
-import { MatDialog } from '@angular/material/dialog';
-import * as $ from 'jquery';
+
+
 
 @Component({
   selector: 'app-home-details',
@@ -28,7 +28,7 @@ export class HomeDetailsComponent implements OnInit{
     private router:Router,
     private actRoute:ActivatedRoute,
     private carService:CarService,
-    private dialog:MatDialog
+
   ){}
   ngOnInit(): void {
     this.actRoute.params.subscribe(params => {
@@ -37,10 +37,7 @@ export class HomeDetailsComponent implements OnInit{
       this.carFeatures=this.carService.getCarFeatures(this.carId)
    
     });
-   
-    
- 
- }
+  }
  openImage(index:number){
     this.imageIndex=index
     this.showImage=!this.showImage
